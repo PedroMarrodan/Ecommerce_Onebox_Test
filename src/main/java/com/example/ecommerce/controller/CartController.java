@@ -17,10 +17,9 @@ public class CartController {
 
     @PostConstruct
     public void initializeProducts() {
-        // Add some predefined products
-        productsList.add(new Product(1, "Airpods PRO",1));
-        productsList.add(new Product(2,"Nike",2));
-        productsList.add(new Product(3,"Ticket",1));
+        productsList.add(new Product(1, "Airpods PRO",2));
+        productsList.add(new Product(2,"MacBook PRO",1));
+        productsList.add(new Product(3,"iPad Air",1));
     }
 
     @GetMapping("ecommerce/products")

@@ -35,8 +35,8 @@ class CartControllerTest {
     void getProducts() {
         List<Product> expectedProducts = new ArrayList<>();
         expectedProducts.add(new Product(1, "Airpods PRO",1));
-        expectedProducts.add(new Product(2,"Nike",2));
-        expectedProducts.add(new Product(3,"Ticket",1));
+        expectedProducts.add(new Product(2,"MacBook PRO",1));
+        expectedProducts.add(new Product(3,"iPad Air",1));
 
         List<Product> actualProducts = cartController.getProducts();
 
@@ -44,7 +44,7 @@ class CartControllerTest {
 
         List<Product> notExpectedProducts = new ArrayList<>();
         notExpectedProducts.add(new Product(1, "Airpods PRO",1));
-        notExpectedProducts.add(new Product(2,"Nike",2));
+        notExpectedProducts.add(new Product(3,"iPad Air",1));
 
         assertFalse(notExpectedProducts.size() == actualProducts.size(), "The quantity of products must not match");
     }
